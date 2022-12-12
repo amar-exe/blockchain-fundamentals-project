@@ -8,8 +8,13 @@ I am currently figuring out what a bridge is on blockchain. First I need to figu
 So for this week, I will delve deeper into the mechanics behind bridges. I am reading these articles for know, and when I finish I will post a summary.
 
 <link>https://101blockchains.com/blockchain-bridges/</link>
+
 <link>https://blog.liquid.com/blockchain-cross-chain-bridge</link>
+
 <link>https://ethereum.org/en/bridges/</link>
+
 <link>https://www.coindesk.com/learn/what-are-blockchain-bridges-and-how-do-they-work/</link>
+
 <link>https://limechain.tech/blog/what-are-blockchain-bridges/</link>
+
 <link>https://academy.binance.com/en/articles/what-s-a-blockchain-bridge</link>
