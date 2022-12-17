@@ -18,3 +18,30 @@ So for this week, I will delve deeper into the mechanics behind bridges. I am re
 <link>https://limechain.tech/blog/what-are-blockchain-bridges/</link><br/>
 
 <link>https://academy.binance.com/en/articles/what-s-a-blockchain-bridge</link><br/>
+
+
+### Summary of research on bridges
+Blockchain bridges are a type of technology that allows two different blockchain networks to communicate and exchange data or value. They can be used to link two independent blockchains, or to connect a main blockchain to a sidechain.
+
+There are several types of blockchain bridges, including:
+
+- Cross-chain bridges: These bridges allow two different blockchain networks to exchange data or value directly.
+
+- Interledger bridges: These bridges allow different blockchain networks to communicate with each other via an intermediate layer, such as the Interledger Protocol (ILP).
+
+- State channels: These bridges allow two parties to perform transactions off-chain, reducing the burden on the main blockchain and improving scalability.
+
+Blockchain bridges have a number of potential uses, including:
+
+- Enabling cross-chain interoperability
+- Enabling cross-chain transactions
+- Allowing for the creation of sidechains
+- Facilitating the exchange of assets between different blockchain networks
+- Enabling the use of different blockchain protocols in a single application
+
+---
+
+As for the general steps in creating a 51% attack on a private network, this is the steps that I could think of so far. Keep in mind these may not be 100% correct, but I think I am on the right track:
+1. Set up a private Ethereum network. This network also must include a private Ethereum bridge. 
+2. Building and implementing the private Ethereum bridge. This bridge will need to implement my private network to another network.
+3. Abuse the flawed bridge
