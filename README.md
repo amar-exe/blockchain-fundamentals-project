@@ -45,3 +45,23 @@ As for the general steps in creating a 51% attack on a private network, this is 
 1. Set up a private Ethereum network. This network also must include a private Ethereum bridge. 
 2. Building and implementing the private Ethereum bridge. This bridge will need to implement my private network to another network.
 3. Abuse the flawed bridge
+
+
+## 26. 12. 2022
+After doing more research, I realized that maybe building my own blockchain and simulating a 51% attack is easier than building my own bridge. I am now in the process of finding all documenatiation possible on creating my blockchain, and then I will learn more about creating a 51% attack on it.
+
+I am also looking into forking my blockchain from Ethereum to see what is more suitable for this project.
+
+These are the resources I found so far:
+
+<link>https://www.youtube.com/watch?v=TdNX5pd0us8&t=24s</link><br/>
+
+<link>https://www.youtube.com/watch?v=eAC2ePBckj8</link><br/>
+
+<link>https://www.youtube.com/watch?v=s17ycfYQwYA</link><br/>
+
+<link>https://www.youtube.com/watch?v=HsTXD0vS-2E</link><br/>
+
+<link>https://www.youtube.com/watch?v=JTwWCeIKAiE</link><br/>
+
+<link>https://www.youtube.com/watch?v=JTwWCeIKAiE</link><br/>
