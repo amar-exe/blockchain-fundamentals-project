@@ -9,6 +9,7 @@ interface Props {
 }
 
 const Timeline = ({account, tweetContract}: Props) => {
+  
     const [tweets, setTweets] = useState<Tweet[]>();
 
     const getTweets = async () => {
@@ -22,7 +23,7 @@ const Timeline = ({account, tweetContract}: Props) => {
                     address: w.sender,
                     username: w.username,
                     content: w.content,
-                    timestamp: w.timestamp._hex
+                    timestamp: w.timestamp.toNumber()
                 }
             ));
         }
@@ -36,15 +37,9 @@ const Timeline = ({account, tweetContract}: Props) => {
     }, [tweetContract]);
 
     return (
-        <div className="chat">
-          <div className="chat__messages">
-            {!tweetContract && (
-              <p className="state-message">
-                Connect to the chat in order to see the messages!
-              </p>
-            )}
+        <div className="timeline">
             {account && tweets && tweets.length === 0 && (
-              <p className="state-message">There is no message to display</p>
+              <p className="state-message">There is no tweets to display</p>
             )}
             {tweets &&
               tweets.length > 0 &&
@@ -56,7 +51,6 @@ const Timeline = ({account, tweetContract}: Props) => {
                   timestamp={m.timestamp}
                 />
               ))}
-          </div>
           {!account && (
               <p className="state-message">Connect With Metamask to chat!</p>
             )}

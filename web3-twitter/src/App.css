@@ -1,11 +1,13 @@
 body {
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2A2C3F;
+  background-color: #264653;
 }
 
 code {
@@ -20,16 +22,20 @@ code {
   font-size: 13px;
   font-weight: bold;
 }
-
+.root{
+  width: 100%;
+}
 .App {
-  width: 80vw;
-  display: flex;
+  width: 80%;
   margin: 0 auto;
+  display: flex;
   height: 80vh;
   flex-direction: column;
   margin-top: 10vh;
 }
-
+.timeline{
+  width: 100%;
+}
 .sidebar {
   width: 100%;
   justify-content: center;
@@ -38,7 +44,7 @@ code {
   margin-bottom: 50px;
 }
 .login-button{
-  background-color: #32ba89;
+  background-color: #2a9d8f;
   padding: 15px;
   border-radius: 5px;
 }
@@ -158,3 +164,42 @@ width:100%;
   right: 10px;
   -webkit-transform: rotate(118deg) skew(-5deg);
 }
+
+#quote-box {
+  border-radius: 15px;
+  width: 100%;
+  padding: 50px 25px;
+
+  margin-bottom: 25px;
+  margin-left: -25px;
+  background-color: #f4a261;
+}
+#quote-box .quote-text {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.55rem;
+}
+#quote-box .quote-text i {
+  font-size: 1.7rem;
+  margin-right: 15px;
+}
+#quote-box .quote-author {
+  width: 100%;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1.1rem;
+  text-align: left;
+  font-style: italic;
+}
+
+#quote-box .quote-date {
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+
+
