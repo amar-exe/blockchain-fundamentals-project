@@ -29,7 +29,7 @@ const CreateTweet = ({account, tweetContract}: Props) => {
         onChange={(e) => 
         {setTweetText(e.target.value)}
         }></textarea>
-        <button className="button accept-btn" onClick={postTweet}>Post</button>
+        <button className="button post-tweet" onClick={postTweet}>Post</button>
     </div>
     </div>
   )

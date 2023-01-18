@@ -296,6 +296,13 @@ color: #fff;
 transform: translateY(-7px);
 }
 
+.button.post-tweet:hover {
+  background-color: #e9c46a;
+  box-shadow: 0px 15px 20px #ba922d;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
 .c-checkbox {
   display: none;
 }
