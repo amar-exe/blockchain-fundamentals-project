@@ -9,6 +9,20 @@ const AdminPanel = ({ account, tweetContract }: Props) => {
     const [address, setAddress] = useState<string>("");
     const [username, setUsername] = useState<string>("");
 
+    const [newOwner, setNewOwner] = useState<string>("");
+
+    const changeOwner =async () => {
+        if (!tweetContract) return;
+        try {
+            const messageTxn = await tweetContract.transferOwnership(newOwner)
+            await messageTxn.wait();
+            } catch (e) {
+            console.warn("Transaction failed with error", e);
+            } finally {
+                window.location.reload();
+            }
+    }
+
     const changeUsername =async () => {
         if (!tweetContract) return;
         try {
@@ -17,7 +31,7 @@ const AdminPanel = ({ account, tweetContract }: Props) => {
             } catch (e) {
             console.warn("Transaction failed with error", e);
             } finally {
-                console.log("radi");
+                
             }
     }
     
@@ -61,8 +75,18 @@ const AdminPanel = ({ account, tweetContract }: Props) => {
         <div className="transfer-ownership-section">
             <h5 className='function-title'>Transfer ownership</h5>
             <div className="input-group">
-                <input type="text" className="change-username-input" placeholder='New Owner Address'/>
-                <button className="button cancel-btn">Transfer</button>
+                <input type="text" 
+                className="change-username-input" 
+                placeholder='New Owner Address'
+                value={newOwner}
+                onChange={(e) => {
+                    setNewOwner(e.target.value)
+                }
+
+                }/>
+                <button className="button cancel-btn"
+                onClick={changeOwner}
+                >Transfer</button>
             </div>
         </div>
     </div>
