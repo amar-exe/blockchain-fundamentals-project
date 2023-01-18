@@ -43,7 +43,7 @@ const Timeline = ({account, tweetContract}: Props) => {
             )}
             {tweets &&
               tweets.length > 0 &&
-              tweets.map((m, i) => (
+              tweets.slice(0).reverse().map((m, i) => (
                 <SingleTweet
                   key={i}
                   username={m.username}
