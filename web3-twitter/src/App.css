@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,200;0,500;1,300&display=swap');
+
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -181,6 +185,8 @@ width:100%;
   clear: both;
   font-weight: 500;
   font-size: 1.55rem;
+  font-family: Sofia Sans;
+
 }
 #quote-box .quote-text i {
   font-size: 1.7rem;
@@ -194,12 +200,17 @@ width:100%;
   font-size: 1.1rem;
   text-align: left;
   font-style: italic;
+  font-weight: 400;
+  font-family: Sofia Sans;
 }
 
 #quote-box .quote-date {
   width: 100%;
   height: auto;
   text-align: left;
+  font-family: Sofia Sans;
+  font-weight: 200;
+
 }
 
 .tester{
@@ -540,7 +551,6 @@ textarea {
  
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .centered {
   width: 100vw;
   height: 100vh;
@@ -555,4 +565,8 @@ textarea {
     font-family: Roboto;
     text-align: center;
     color: #ebe3d1;
+ }
+
+ .create-tweet-heading {
+  font-family: Sofia Sans
  }

@@ -37,7 +37,7 @@ const AddUsername = ({account, tweetContract}: Props) => {
                 }/>
                 <button className="button cancel-btn"
                 onClick={addUsername}
-                >Transfer</button>
+                >Add</button>
             </div>
         </div>
   )

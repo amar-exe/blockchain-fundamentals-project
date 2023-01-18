@@ -23,7 +23,7 @@ const CreateTweet = ({account, tweetContract}: Props) => {
 
   return (
     <div>
-        <h1>Create Tweet</h1>
+        <h1 className="create-tweet-heading">Create Tweet</h1>
         <div className="input-group">
         <textarea name="myText" id="myTextarea" placeholder="Type here..." value={tweetText} 
         onChange={(e) => 

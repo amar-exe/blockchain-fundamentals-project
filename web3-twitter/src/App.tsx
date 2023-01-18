@@ -9,10 +9,11 @@ import CreateTweet from "./components/CreateTweet";
 import AddUsername from "./components/AddUsername";
 
 function App() {
-  const contractAddress = "0xe4FC7009Bc3d32667C1c7F2778548ce878b5A2A3";
+  const contractAddress = "0x8F8f27A2834F1e0CC5143Bda3e71675C196DfF73";
   const [account, setAccount] = useState<string>();
   const [ownerAddress, setOwnerAddress] = useState<string>();
-  const [username, setUsername] = useState<string>("");
+  const [username, setUsername] = useState<string>();
+
   const getOwnerAddress = async () => {
     if (!twitterContract || account) return;
 
@@ -22,11 +23,16 @@ function App() {
       });
   };
 
+  useEffect(() => {
+    document.title = "Web3 Twitter"
+ }, []);
+
   const getUsername = async () => {
     if (!twitterContract || account) return;
 
-    const username = await twitterContract.getUsername(account);
+    const username = await twitterContract.getUsername();
       setUsername(() => {
+        console.log("ime",username)
         return username;
       });
   };
@@ -43,7 +49,7 @@ function App() {
   }, [twitterContract]);
 
   useEffect(() => {
-    if (!twitterContract || !account) return;
+    if (!twitterContract) return;
     getUsername();
   }, [twitterContract]);
 
@@ -53,7 +59,7 @@ function App() {
     <div className="App">
       {(account === ownerAddress && account) && 
       <AdminPanel account={account} tweetContract={twitterContract} />}
-      {(username=="" && account) && <AddUsername account={account} tweetContract={twitterContract} />}
+      {(username==null && account) && <AddUsername account={account} tweetContract={twitterContract} />}
       {(account) && <CreateTweet account={account} tweetContract={twitterContract} />}
       <Login setAccount={setAccount} account={account} />
       <Timeline account={account} tweetContract={twitterContract} />
