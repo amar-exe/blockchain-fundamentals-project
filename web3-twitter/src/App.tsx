@@ -33,11 +33,11 @@ function App() {
 
   return (
     <div className="App">
+      <CreateTweet account={account} tweetContract={twitterContract} />
       <Login setAccount={setAccount} account={account} />
       <Timeline account={account} tweetContract={twitterContract} />
       {(account === ownerAddress && account) && 
       <AdminPanel account={account} tweetContract={twitterContract} />}
-      <CreateTweet account={account} tweetContract={twitterContract} />
     </div>
   );
 }

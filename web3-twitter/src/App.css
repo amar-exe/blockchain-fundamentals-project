@@ -511,3 +511,35 @@ transform: translateY(-7px);
   color: #e0e0e0;
   font-family: "Ubuntu", sans-serif;
 }
+
+textarea {
+  display:block;
+  box-sizing: border-box;
+  width:100%;
+  resize: none;
+  overflow-y: hidden;
+  
+  /* optional CSS */
+  border: 0;
+  outline: 0;
+  background: white;
+  border-radius: 20px;
+  padding:20px;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #343434;
+  margin-bottom: 70px;
+  flex: 4;
+ 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+.centered {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ /* /optional CSS */

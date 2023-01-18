@@ -17,6 +17,7 @@ const CreateTweet = ({account, tweetContract}: Props) => {
         } catch (e) {
           console.warn("Transaction failed with error", e);
         } finally {
+          setTweetText("");
         }
       };
 
@@ -28,7 +29,7 @@ const CreateTweet = ({account, tweetContract}: Props) => {
         onChange={(e) => 
         {setTweetText(e.target.value)}
         }></textarea>
-        <button onClick={postTweet}>Post</button>
+        <button className="button accept-btn" onClick={postTweet}>Post</button>
     </div>
     </div>
   )
