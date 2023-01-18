@@ -38,6 +38,9 @@ const Timeline = ({account, tweetContract}: Props) => {
 
     return (
         <div className="timeline">
+          {!account && (
+              <h1 className="heading1">Log in to your account to post tweets!</h1>
+            )}
             {account && tweets && tweets.length === 0 && (
               <p className="state-message">There is no tweets to display</p>
             )}
@@ -51,9 +54,7 @@ const Timeline = ({account, tweetContract}: Props) => {
                   timestamp={m.timestamp}
                 />
               ))}
-          {!account && (
-              <p className="state-message">Connect With Metamask to chat!</p>
-            )}
+          
           
         </div>
       );

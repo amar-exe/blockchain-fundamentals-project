@@ -550,3 +550,9 @@ textarea {
   align-items: center;
 }
  /* /optional CSS */
+
+ .heading1 {
+    font-family: Roboto;
+    text-align: center;
+    color: #ebe3d1;
+ }
