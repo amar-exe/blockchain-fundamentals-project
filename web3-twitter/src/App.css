@@ -1,6 +1,7 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: scroll;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -29,7 +30,6 @@ code {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  height: 80vh;
   flex-direction: column;
   margin-top: 10vh;
 }
@@ -202,4 +202,312 @@ width:100%;
   text-align: left;
 }
 
+.tester{
+  font-size: 15px;
+  animation: slideMe 1s ease-in;
+}
 
+.tester2{
+  font-size: 15px;
+  animation: slideMeOut 1s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 1s linear; 
+}
+
+
+
+
+
+
+@keyframes slideMe{
+0%{
+  transform: skewX(53deg) translateX(500px);
+}
+100%{
+  transform: skew(0deg);
+}
+}
+
+@keyframes slideMeOut{
+0%{
+  transform: skewX(-53deg) translateX(-500px);
+}
+100%{
+  transform: skew(0deg);
+}
+}
+
+
+
+.hide{
+display: none;
+}
+
+.show{
+display: block!important;
+}
+
+.ta-r{
+text-align: right;
+}
+
+.ta-c{
+text-align: center;
+}
+
+.padT150{
+padding-top: 150px;
+}
+
+.padB150{
+padding-bottom:150px;
+}
+
+.button {
+width: 140px;
+height: 45px;
+font-family: 'Roboto', sans-serif;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: #000;
+background-color: #fff;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+}
+
+.button.cancel-btn:hover {
+background-color: #F3270B;
+box-shadow: 0px 15px 20px rgba(243, 42, 11, 0.4);
+color: #fff;
+transform: translateY(-7px);
+}
+
+.button.accept-btn:hover {
+background-color: #32c632;
+box-shadow: 0px 15px 20px rgba(11, 243, 11, 0.4);
+color: #fff;
+transform: translateY(-7px);
+}
+
+.c-checkbox {
+  display: none;
+}
+.c-checkbox:checked + .c-formContainer .c-form {
+  width: 37.5em;
+}
+.c-checkbox:checked + .c-formContainer .c-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.c-checkbox:checked + .c-formContainer .c-form__input, .c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+  transition: 0.2s 0.1s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before, .c-checkbox:checked + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
+  content: 'Thank You! \1F60A';
+}
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+.c-formContainer, .c-form, .c-form__toggle {
+  width: 20em;
+  height: 6.25em;
+}
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+}
+.c-form, .c-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.c-form {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.625em;
+  box-sizing: border-box;
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.c-form__toggle {
+  color: #ff7b73;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-form__toggle::before {
+  font-size: 1.75em;
+  content: attr(data-title);
+}
+.c-form__input, .c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+.c-form__input, .c-form__buttonLabel {
+  font-size: 1.75em;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+.c-form__input {
+  color: #fcc;
+  height: 100%;
+  width: 100%;
+  padding: 0 0.714em;
+}
+.c-form__input::placeholder {
+  color: currentColor;
+}
+.c-form__input:required:valid {
+  color: #ff7b73;
+}
+.c-form__input:required:valid + .c-form__buttonLabel {
+  color: #fff;
+}
+.c-form__input:required:valid + .c-form__buttonLabel::before {
+  pointer-events: initial;
+}
+.c-form__buttonLabel {
+  color: #ffaea9;
+  height: 100%;
+  width: auto;
+}
+.c-form__buttonLabel::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  cursor: pointer;
+}
+.c-form__button {
+  color: inherit;
+  padding: 0;
+  height: 100%;
+  width: 5em;
+  background-color: #ff7b73;
+}
+
+*:focus {
+  outline: none;
+}
+.input-group{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap:10px;
+}
+.input-group button{
+  flex:1;
+}
+.input-group input::placeholder {
+  color: rgb(36, 35, 35);
+}
+.change-username-input {
+  flex:2;
+  max-width: 100%;
+  height: 50px;
+  border: 0;
+  padding-left: 20px;
+  background-color: #2a9d8f;
+  border-bottom-left-radius: 41px;
+  border-bottom-right-radius: 41px;
+  border-top-left-radius: 41px;
+  border-top-right-radius: 0;
+  box-shadow: 0 17px 40px 0 rgba(75, 128, 182, 0.07);
+  margin-bottom: 22px;
+  position: relative;
+  font-size: 17px;
+  color: #040a10;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
+.change-username-input:hover {
+  box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.077);
+}
+
+.change-username-input input {
+  position: absolute;
+  border: 0;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 65px;
+  width: 100%;
+  padding: 0 53px;
+  box-sizing: border-box;
+  z-index: 3;
+  display: block;
+  color: #1a6fc4;
+  font-size: 17px;
+  font-family: "Oxygen", sans-serif;
+  transition: top 0.1s ease-in-out;
+}
+
+.change-username-input input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.change-username-input input:focus,
+.change-username-input input:not(:placeholder-shown) {
+  top: 17px;
+}
+
+.change-username-input label {
+  position: absolute;
+  border: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0 53px;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+  cursor: text;
+}
+
+.change-username-input input:focus + label,
+.change-username-input input:not(:placeholder-shown) + label {
+  bottom: 20px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.req-mark {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: 33px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 22px;
+  color: #e0e0e0;
+  font-family: "Ubuntu", sans-serif;
+}

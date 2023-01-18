@@ -23,15 +23,18 @@ const AdminPanel = ({ account, tweetContract }: Props) => {
         <h2 className="section-title">AdminPanel</h2>
         <div className="change-username-section">
             <h5 className='function-title'>Change username</h5>
-            <input type="text" className="change-username-input" placeholder='' />
-            <input type="text" className="change-username-input" />
-            <button className="approve-button">Approve</button>
+            <div className="input-group">
+                <input type="text" className="change-username-input" placeholder='Address' />
+                <input type="text" className="change-username-input" placeholder='New username'/>
+                <button className="button accept-btn">Approve</button>
+            </div>
         </div>
         <div className="transfer-ownership-section">
             <h5 className='function-title'>Transfer ownership</h5>
-            <input type="text" className="transfer-ownership-input" />
-            <input type="text" className="transfer-ownership-input" />
-            <button className="approve-button">Approve</button>
+            <div className="input-group">
+                <input type="text" className="change-username-input" placeholder='New Owner Address'/>
+                <button className="button cancel-btn">Transfer</button>
+            </div>
         </div>
     </div>
   )
