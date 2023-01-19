@@ -213,6 +213,10 @@ width:100%;
 
 }
 
+.section-title {
+  font-family: Sofia Sans;
+}
+
 .tester{
   font-size: 15px;
   animation: slideMe 1s ease-in;
@@ -278,8 +282,9 @@ padding-bottom:150px;
 .button {
 width: 140px;
 height: 45px;
-font-family: 'Roboto', sans-serif;
-font-size: 11px;
+font-family: 'Sofia Sans', sans-serif;
+font-size: 13px;
+font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 2.5px;
 font-weight: 500;
@@ -298,6 +303,11 @@ background-color: #F3270B;
 box-shadow: 0px 15px 20px rgba(243, 42, 11, 0.4);
 color: #fff;
 transform: translateY(-7px);
+}
+.function-title {
+  font-family: Sofia Sans;
+  font-weight: normal;
+  color: #babbcc;
 }
 
 .button.accept-btn:hover {
@@ -441,6 +451,7 @@ transform: translateY(-7px);
 }
 .input-group input::placeholder {
   color: rgb(36, 35, 35);
+  font-family: Sofia Sans;
 }
 .change-username-input {
   flex:2;
