@@ -19,6 +19,7 @@ const AddUsername = ({account, tweetContract}: Props) => {
             console.warn("Transaction failed with error", e);
             } finally {
                 window.location.reload();
+                
             }
     }
 
@@ -35,7 +36,7 @@ const AddUsername = ({account, tweetContract}: Props) => {
                 }
 
                 }/>
-                <button className="button cancel-btn"
+                <button className="button post-tweet"
                 onClick={addUsername}
                 >Add</button>
             </div>

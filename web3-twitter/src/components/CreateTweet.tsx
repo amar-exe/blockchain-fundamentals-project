@@ -18,6 +18,7 @@ const CreateTweet = ({account, tweetContract}: Props) => {
           console.warn("Transaction failed with error", e);
         } finally {
           setTweetText("");
+          window.location.reload();
         }
       };
 
